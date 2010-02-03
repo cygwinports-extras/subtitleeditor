@@ -1,0 +1,12 @@
+strtoll is in a !__STRICT_ANSI__ block in stdlib.h
+
+--- origsrc/subtitleeditor-0.36.0/plugins/subtitleformats/advancedsubstationalpha/advancedsubstationalpha.cc	2009-12-21 05:49:30.000000000 -0600
++++ src/subtitleeditor-0.36.0/plugins/subtitleformats/advancedsubstationalpha/advancedsubstationalpha.cc	2010-02-03 01:20:02.232397500 -0600
+@@ -20,6 +20,7 @@
+  *	along with this program. If not, see <http://www.gnu.org/licenses/>.
+  */
+ 
++#undef __STRICT_ANSI__
+ #include <extension/subtitleformat.h>
+ #include <utility.h>
+ #include <iomanip>

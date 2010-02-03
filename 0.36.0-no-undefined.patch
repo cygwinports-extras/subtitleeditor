@@ -1,0 +1,17 @@
+Plugins use -L$(top_srcdir)/src -lsubtitleeditor.  Besides top_srcdir being 
+wrong, they should really refer directly to the library by path:
+$(top_builddir)/src/libsubtitleeditor.la
+
+This is a cheap workaround instead of patching dozens of plugin Makefiles.
+
+--- origsrc/subtitleeditor-0.36.0/configure.in	2010-02-02 04:35:44.000000000 -0600
++++ src/subtitleeditor-0.36.0/configure.in	2010-02-02 21:46:53.674933800 -0600
+@@ -37,7 +37,7 @@ AC_SUBST([ACLOCAL_AMFLAGS], ["-I $ac_mac
+ 
+ AC_DISABLE_STATIC
+ AC_PROG_LIBTOOL
+-PLUGIN_LIBTOOL_FLAGS="-module -avoid-version"
++PLUGIN_LIBTOOL_FLAGS="-module -avoid-version -no-undefined -L\$(top_builddir)/src"
+ AC_SUBST(PLUGIN_LIBTOOL_FLAGS)
+ 
+ # =========================================================================
