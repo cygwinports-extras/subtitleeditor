@@ -9,4 +9,4 @@ PATCH_URI="
 	0.36.0-strict-ansi.patch
 "
 
-CYGCONF_ARGS="--with-default-audio-sink=osssink --with-default-video-sink=ximagesink"
+CYGCONF_ARGS="--with-default-audio-sink=autoaudiosink --with-default-video-sink=ximagesink"

@@ -10,3 +10,13 @@ strtoll is in a !__STRICT_ANSI__ block in stdlib.h
  #include <extension/subtitleformat.h>
  #include <utility.h>
  #include <iomanip>
+--- origsrc/subtitleeditor-0.39.0/plugins/subtitleformats/sami/sami.cc	2011-06-18 03:05:15.000000000 -0500
++++ src/subtitleeditor-0.39.0/plugins/subtitleformats/sami/sami.cc	2011-11-28 04:01:38.750299500 -0600
+@@ -21,6 +21,7 @@
+  *	along with this program. If not, see <http://www.gnu.org/licenses/>.
+  */
+ 
++#undef __STRICT_ANSI__
+ #include <string.h>
+ #include <extension/subtitleformat.h>
+ #include <utility.h>
