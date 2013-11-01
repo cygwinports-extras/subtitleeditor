@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="subtitleeditor"
-VERSION=0.39.0
+VERSION=0.41.0
 RELEASE=1
 CATEGORY="Video"
 SUMMARY="GNOME subtitles editor"
