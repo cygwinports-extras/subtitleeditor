@@ -1,0 +1,20 @@
+inherit gnome2
+
+NAME="subtitleeditor"
+VERSION=0.39.0
+RELEASE=1
+CATEGORY="Video"
+SUMMARY="GNOME subtitles editor"
+DESCRIPTION="Subtitle Editor is a GTK+2 tool to edit subtitles for *NIX. It
+can be used for new subtitles or as a tool to transform, edit, correct and
+refine existing subtitle. This program also shows sound waves, which makes it
+easier to synchronise subtitles to voices."
+REQUIRES="gstreamer0.10-plugins-base gstreamer0.10-plugins-good gstreamer0.10-plugins-ximage"
+HOMEPAGE="http://home.gna.org/subtitleeditor/"
+SRC_URI="http://download.gna.org/subtitleeditor/${VERSION%.*}/${NAME}-${VERSION}.tar.gz"
+PATCH_URI="
+	0.36.0-no-undefined.patch
+	0.36.0-strict-ansi.patch
+"
+
+CYGCONF_ARGS="--with-default-audio-sink=autoaudiosink --with-default-video-sink=ximagesink"
